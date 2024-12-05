@@ -30,7 +30,11 @@ def google_dork():
     
     try:
         # Melakukan pencarian di Google menggunakan modul 'googlesearch-python'
-        for result in search(query, num_results=num_results, stop=num_results):
+        # Menggunakan 'num_results' untuk menentukan jumlah hasil yang diambil
+        results = search(query, num_results=num_results)
+        
+        # Menampilkan hasil pencarian
+        for result in results:
             print(f"Found result: {result}")
     
     except Exception as e:
